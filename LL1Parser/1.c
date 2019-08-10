@@ -179,7 +179,7 @@ void table() {
 					break;
 				}else if(p[i].rhs[j][k]!='^') { //1st(kth) character is non terminal in production
 					for(l=0;l<n;l++) {
-						if(p[i].rhs[j][k]==p[l].non_terminal) //l is the non terminal at kth position of jth 														production ith non terminal
+						if(p[i].rhs[j][k]==p[l].non_terminal) //l is the non terminal at kth position of jth 																production ith non terminal
 							break;
 					}
 					flag=0;
@@ -199,7 +199,7 @@ void table() {
 					//	break;	
 					}		
 				}
-				if((k==strlen(p[i].rhs[j])-1 && flag) ||(p[i].rhs[j][k]=='^')) { //production of type T -> ^ || all the non terminals have ^ in 												their set first and follow of T is to be included
+				if((k==strlen(p[i].rhs[j])-1 && flag) ||(p[i].rhs[j][k]=='^')) { //production of type T -> ^ || all the non terminals 												have ^ in their set first and follow of T is to be included
 					for(l=0;l<p[i].noflw;l++) {
 						index_(p[i].non_terminal,p[i].flw[l],&row,&col);
 						c[row][col].nt=i;
